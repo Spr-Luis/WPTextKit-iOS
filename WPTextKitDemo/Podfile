@@ -1,0 +1,6 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'WPTextKitDemo' do
+  pod 'WPTextKit', :path => '../WPTextKit/'
+end

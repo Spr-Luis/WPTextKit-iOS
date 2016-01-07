@@ -1,0 +1,14 @@
+PODS:
+  - WPTextKit (0.1)
+
+DEPENDENCIES:
+  - WPTextKit (from `../WPTextKit/`)
+
+EXTERNAL SOURCES:
+  WPTextKit:
+    :path: "../WPTextKit/"
+
+SPEC CHECKSUMS:
+  WPTextKit: dd5aca14c540c7b6c39e912a7457edcf05976d41
+
+COCOAPODS: 0.39.0

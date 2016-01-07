@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJI-n6-r76">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="N74-1h-pen">
+            <objects>
+                <navigationController id="VJI-n6-r76" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Wp-OZ-26j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sF1-mx-FXm" kind="relationship" relationship="rootViewController" id="Qb7-uU-Y8C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfZ-ea-XgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="-271"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="tcf-Ta-Kaj">
+            <objects>
+                <tableViewController id="sF1-mx-FXm" customClass="TableViewController" customModule="WPTextKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1W7-39-C7B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="sF1-mx-FXm" id="oxy-2q-hAK"/>
+                            <outlet property="delegate" destination="sF1-mx-FXm" id="BQn-97-e8X"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="g4E-Mh-AZs"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOD-6A-uIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1469" y="-271"/>
+        </scene>
+        <!--Sample View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SampleViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SampleViewController" customModule="WPTextKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WYS-Kv-FlW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="15E-79-zUl"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WYS-Kv-FlW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6ED-yS-8RF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WYS-Kv-FlW" secondAttribute="bottom" id="at7-7k-zkQ"/>
+                            <constraint firstItem="WYS-Kv-FlW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bTA-ZD-Sho"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WYS-Kv-FlW" secondAttribute="trailing" constant="-20" id="rOY-3a-nX0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qtr-4g-ht4"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="textView" destination="WYS-Kv-FlW" id="Rik-Ay-m7D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2147" y="-271"/>
+        </scene>
+        <!--Sample Video View Controller-->
+        <scene sceneID="5UW-T9-puo">
+            <objects>
+                <viewController storyboardIdentifier="SampleVideoViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jHT-O2-V4S" customClass="SampleVideoViewController" customModule="WPTextKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8z4-De-TVx"/>
+                        <viewControllerLayoutGuide type="bottom" id="F6F-d1-zgK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CiA-FF-jWJ">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-P6-2Ly">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jHT-O2-V4S" id="yzG-1F-Q5a"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kyy-P6-2Ly" firstAttribute="leading" secondItem="CiA-FF-jWJ" secondAttribute="leadingMargin" constant="-20" id="5Rj-c6-eXI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kyy-P6-2Ly" secondAttribute="trailing" constant="-20" id="Uik-F4-j7Y"/>
+                            <constraint firstItem="kyy-P6-2Ly" firstAttribute="top" secondItem="8z4-De-TVx" secondAttribute="bottom" id="fPr-sY-3TN"/>
+                            <constraint firstItem="F6F-d1-zgK" firstAttribute="top" secondItem="kyy-P6-2Ly" secondAttribute="bottom" id="mA4-bF-eUo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5gA-Ki-npN"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="textView" destination="kyy-P6-2Ly" id="N4R-vX-G19"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KjF-cR-jjE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2147" y="410"/>
+        </scene>
+        <!--Sample Async View Controller-->
+        <scene sceneID="BFm-zE-P7R">
+            <objects>
+                <viewController storyboardIdentifier="SampleAsyncViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0QV-si-33n" customClass="SampleAsyncViewController" customModule="WPTextKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D4s-Vl-Ssk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wxh-ko-pxS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aAT-MT-r3j">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W54-dh-1VU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0QV-si-33n" id="AQ3-9u-s0G"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W54-dh-1VU" firstAttribute="top" secondItem="D4s-Vl-Ssk" secondAttribute="bottom" id="9R1-40-sET"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W54-dh-1VU" secondAttribute="trailing" constant="-20" id="ElS-pf-aUB"/>
+                            <constraint firstItem="Wxh-ko-pxS" firstAttribute="top" secondItem="W54-dh-1VU" secondAttribute="bottom" id="e4N-0T-DsE"/>
+                            <constraint firstItem="W54-dh-1VU" firstAttribute="leading" secondItem="aAT-MT-r3j" secondAttribute="leadingMargin" constant="-20" id="g0M-W9-WSE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EyZ-QA-GtR"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="textView" destination="W54-dh-1VU" id="ixL-gq-KrJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ucv-QN-Jxe" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2147" y="-932"/>
+        </scene>
+    </scenes>
+</document>

@@ -84,7 +84,7 @@ public class WPTextAttachment: NSTextAttachment
 
 
     /// Adjusts the amount of space for the attachment glyph on a line fragment. 
-    /// Used for clearing text trailing an attachment when align equals .Noen
+    /// Used for clearing text trailing an attachment when align equals .None
     ///
     public override func attachmentBoundsForTextContainer(textContainer: NSTextContainer?, proposedLineFragment lineFrag: CGRect, glyphPosition position: CGPoint, characterIndex charIndex: Int) -> CGRect {
         if align != .None || textContainer == nil {
@@ -92,7 +92,7 @@ public class WPTextAttachment: NSTextAttachment
         }
 
         let width = (lineFrag.width - position.x) - (textContainer!.lineFragmentPadding * 2.0)
-        let rect = CGRectMake(0.0, 0.0, floor(width), 1)
+        let rect = CGRectMake(0.0, 0.0, floor(width), 1.0)
         return rect
     }
 

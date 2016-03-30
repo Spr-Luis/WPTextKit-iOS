@@ -176,7 +176,7 @@ public extension NSAttributedString
         var counter = 0
 
         for match:NSTextCheckingResult in matches.reverse() {
-            counter++
+            counter += 1
             let identifier = WPTextAttachmentIdentifier + tagName + String(counter)
             let matchedString = mString.substringWithRange(match.range)
 
